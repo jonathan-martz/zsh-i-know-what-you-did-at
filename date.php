@@ -1,6 +1,10 @@
 <?php
 $argv = $_SERVER['argv'];
 
+if(count($argv) !== 3){
+    die('Parameter missing! -> php date.php jonathan 14.02.2020');
+}
+
 $filename = '/home/'.$argv[1].'/.zsh_history';
 $file = file_get_contents($filename);
 
